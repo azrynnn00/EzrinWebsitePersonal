@@ -1,0 +1,340 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Me: Learn about my journey in Website Design Development, skills, and passion for creating modern web experiences.">
+    <meta name="keywords" content="about me, web design, HTML, CSS, portfolio, skills">
+    <title>About Me - Website Design Development</title>
+   <!-- Google Fonts for better typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --burgundy: #800020; 
+            --cream: #f5f5dc; 
+            --accent: #c19a6b; 
+            --bg-color: #efe5dc; 
+            --text-color: #333;
+            --shadow: 0 4px 8px rgba(0,0,0,0.1);
+            --transition: all 0.4s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif; 
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: #ad2e24;
+            color: var(--cream);
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #81171b; 
+            z-index: 1;
+        }
+        header .content {
+            position: relative;
+            z-index: 2;
+            animation: slideIn 1s ease-out;
+        }
+        header h1 {
+		    font-family: 'Dancing Script', cursive; 
+            font-size: 5em;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        header p {
+            font-size: 1.2em;
+            font-weight: 400;
+        }
+
+        nav {
+            background-color: var(--burgundy);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            box-shadow: var(--shadow);
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        nav li {
+            margin: 0 20px;
+        }
+        nav a {
+            color: var(--cream);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 10px 15px;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        nav a:hover {
+            background-color: var(--accent);
+            border-radius: 5px;
+            transform: translateY(-2px);
+        }
+
+        main {
+            display: flex;
+            gap: 30px;
+            padding: 40px 0;
+        }
+        .sidebar {
+            flex: 0 0 300px;
+            background: var(--cream);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            animation: fadeIn 1.2s ease-in;
+        }
+        .sidebar h3 {
+            color: var(--burgundy);
+            margin-bottom: 15px;
+        }
+        .sidebar ul {
+            list-style: none;
+        }
+        .sidebar li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+        .sidebar li::before {
+            content: '>';
+            color: var(--accent);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        .progress-bar {
+            width: 100%;
+            height: 10px;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-top: 5px;
+        }
+        .progress-bar div {
+            height: 100%;
+            border-radius: 5px;
+            transition: width 0.3s ease;
+        }
+
+        .content-area {
+            flex: 1;
+        }
+
+        .intro {
+            background: var(--cream);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            margin-bottom: 30px;
+            animation: fadeIn 1.4s ease-in;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .intro img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: var(--shadow);
+        }
+        .intro .text {
+            flex: 1;
+        }
+        .intro h2 {
+            color: var(--burgundy);
+            margin-bottom: 15px;
+        }
+
+        .journey {
+            background: var(--cream); 
+            color: var(--burgundy); 
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            font-family: 'Fira Code', monospace;
+            animation: fadeIn 1.6s ease-in;
+            border-left: 5px solid var(--accent); 
+        }
+        .journey h3 {
+            color: var(--burgundy);
+            margin-bottom: 15px;
+        }
+        .journey p {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            border-left: 3px solid var(--burgundy);
+            font-style: italic; 
+        }
+
+        footer {
+            background: var(--burgundy);
+            color: var(--cream);
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 40px;
+        }
+        footer a {
+            color: var(--cream);
+            margin: 0 15px;
+            font-size: 1.5em;
+            transition: var(--transition);
+        }
+        footer a:hover {
+            color: var(--accent);
+            transform: scale(1.2);
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            main { flex-direction: column; }
+            .sidebar { flex: none; }
+            .intro { flex-direction: column; text-align: center; }
+            nav ul { flex-direction: column; align-items: center; }
+            nav li { margin: 10px 0; }
+        }
+        @media (max-width: 480px) {
+            header h1 { font-size: 2em; }
+            .journey { padding: 20px; }
+        }
+    </style>
+	
+</head>
+<body>
+
+<header>
+    <div class="content">
+        <h1>About Ezryn !!</h1>
+        <p>Welcome to my biodata. I’m Ezrin and this page highlights the essentials about my life, skills
+		and the things I’m currently working on. I’m glad you’re here.</p>
+    </div>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="aboutme.html"><i class="fas fa-user"></i> About Me</a></li>
+        <li><a href="experience.html"><i class="fas fa-briefcase"></i> Experience</a></li>
+        <li><a href="education.html"><i class="fas fa-graduation-cap"></i> Education</a></li>
+        <li><a href="gallery.html"><i class="fas fa-images"></i> Gallery</a></li>
+        <li><a href="family.html"><i class="fas fa-users"></i> Family</a></li>
+    </ul>
+</nav>
+
+<main class="container">
+    <aside class="sidebar">
+        <h3><i class="fas fa-code"></i> Ezryn Skills</h3>
+        <ul>
+            <li>Data Management: Organizing, storing, and maintaining information efficiently.</li>
+            <li>Information Systems: Familiarity with database systems and digital tools for managing information.</li>
+            <li>Documentation & Record Keeping: Accurate and systematic handling of documents and records.</li>
+            <li>Technology Skills: Proficient with Microsoft Office (Word, Excel, PowerPoint) and other relevant software.</li>
+			<li>Leadership & Responsibility: Leading tasks when required and taking accountability for outcomes.</li>
+			
+        </ul>
+        <p><h3><i class="fas fa-code"></i> Proficiency Levels:</h3></p>
+        <p>HTML: <div class="progress-bar"><div style="width: 85%; background: var(--burgundy);"></div></div></p>
+        <p>CSS: <div class="progress-bar"><div style="width: 90%; background: var(--burgundy);"></div></div></p>
+        <p>Design Tools: <div class="progress-bar"><div style="width: 75%; background: var(--burgundy);"></div></div></p>
+		<p>Canva: <div class="progress-bar"><div style="width: 95%; background: var(--burgundy);"></div></div></p>
+        <p>Management Systems: <div class="progress-bar"><div style="width: 90%; background: var(--burgundy);"></div></div></p>
+		
+		</ul>
+        <p><h3><i class="fas fa-code"></i> Language Skills:</h3></p>
+        <p>English: <div class="progress-bar"><div style="width: 90%; background: var(--burgundy);"></div></div></p>
+        <p>Malay: <div class="progress-bar"><div style="width: 98%; background: var(--burgundy);"></div></div></p>
+        <p>Arabic: <div class="progress-bar"><div style="width: 65%; background: var(--burgundy);"></div></div></p>
+		<p>Thai: <div class="progress-bar"><div style="width: 50%; background: var(--burgundy);"></div></div></p>
+    </aside>
+
+    <div class="content-area">
+        <section class="intro">
+            <img src="gambarniri.jpeg" alt="Photo of [Your Name], a web designer">
+            <div class="text">
+                <h2>Hello, I'm AzrienaEzrin</h2>
+                <p>I am Nur Azriena Ezrin but people call me mimi , an Information Management student who is highly motivated and passionate about the various fields I have explored. 
+				Throughout my journey, I have always upheld the values of discipline, responsibility, and dedication in every task I undertake. I believe that learning never stops, 
+				and every challenge is an opportunity to grow. With the skills I have developed and my deep interest in what I do, I strive to deliver my best work and contribute 
+				meaningful value to any team or organization I become part of.
+				Let's build something amazing together!</p>
+            </div>
+        </section>
+
+        <section class="journey">
+            <h3><i class="fas fa-rocket"></i> Ezryn Journey</h3>
+            <p>Since my school days, I have shown a strong interest in management, organization, and tasks related to information handling.</p>
+            <p>After completing my SPM, I pursued studies in Information Management at UiTM Kedah, having identified this field as the one that best aligns with my interests.</p>
+            <p>I have gained extensive knowledge in data management, information systems, documentation, record-keeping, communication, and technological skills. I also continuously 
+			strive to improve my soft skills, including communication, teamwork, leadership, and critical thinking.</p>
+            <p>I enjoy participating in tasks or activities that help build self-confidence and provide new experiences, while applying discipline, responsibility, and dedication as guiding principles in both my studies and daily life.</p>
+            <p>I firmly believe that this journey is still ongoing, and every step brings me closer to the future I aspire to achieve.</p>
+        </section>
+
+        <section class="journey">
+            <h3><i class="fas fa-heart"></i> What Drives Ezryn</h3>
+            <p>Passion for Learning : Always enthusiastic about acquiring new knowledge and skills, especially in the field of Information Management.</p>
+            <p>Continuous Improvement: Constantly striving to enhance both technical skills and soft skills, such as communication, leadership, and critical thinking.</p>
+            <p>Long-Term Goals: Motivated to build a strong foundation for a successful and fulfilling career.</p>
+            <p>Personal Growth & Development: Driven by experiences and challenges that help me grow.</p>
+            <p>Making a Positive Impact: Inspired to contribute meaningfully to projects, teams, and any environment I am part of.</p>
+        </section>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2025 Website Design Development. Come Know Me Better !!.</p>
+    <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+    <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+</footer>
+
+</body>
+</html>

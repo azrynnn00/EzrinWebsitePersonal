@@ -1,0 +1,314 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Family: highlighting the important role they play in my life and growth .">
+    <meta name="keywords" content="family, personal, inspiration, web design">
+    <title>Family Ezrynn</title>
+    <!-- Google Fonts for better typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #44624a; 
+            --secondary-color: #F1C8CB; 
+            --bg-color: #f1f7ee; 
+            --text-color: #333;
+            --shadow: 0 4px 8px rgba(0,0,0,0.1);
+            --transition: all 0.4s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif; 
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: #c0cfb2;
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(156,173,140,0.8));
+            z-index: 1;
+        }
+        header .content {
+            position: relative;
+            z-index: 2;
+            animation: slideIn 1s ease-out;
+        }
+        header h1 {
+		    font-family: 'Dancing Script', cursive; 
+            font-size: 5em;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        header p {
+            font-size: 1.2em;
+            font-weight: 400;
+        }
+
+        nav {
+            background-color: var(--secondary-color);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            box-shadow: var(--shadow);
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        nav li {
+            margin: 0 20px;
+        }
+        nav a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 10px 15px;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        nav a:hover {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            border-radius: 5px;
+            transform: translateY(-2px);
+        }
+
+        main {
+            padding: 40px 0;
+        }
+
+        .intro {
+            background: var(--secondary-color);
+            color: var(--primary-color);
+            padding: 40px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            margin-bottom: 40px;
+            animation: fadeIn 1.2s ease-in;
+        }
+        .intro h2 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        .family {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        .family-member {
+            background: var(--secondary-color);
+            color: var(--primary-color);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
+            animation: fadeIn 1.4s ease-in;
+        }
+        .family-member:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+        .family-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            transition: var(--transition);
+            border: 3px solid var(--primary-color);
+        }
+        .family-member:hover img {
+            transform: scale(1.1);
+        }
+        .family-member h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        .family-member p {
+            font-size: 0.9em;
+            opacity: 0;
+            transition: var(--transition);
+        }
+        .family-member:hover p {
+            opacity: 1;
+        }
+
+        .stories {
+            background: var(--secondary-color);
+            color: var(--primary-color);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            animation: fadeIn 1.6s ease-in;
+        }
+        .stories h3 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .stories ul {
+            list-style: none;
+            padding-left: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .stories li {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            position: relative;
+        }
+        .stories li::before {
+            content: '❤️';
+            color: var(--accent-color);
+            position: absolute;
+            left: 0;
+        }
+        footer {
+            background: var(--secondary-color);
+            color: var(--primary-color);
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 40px;
+        }
+        footer a {
+            color: var(--primary-color);
+            margin: 0 15px;
+            font-size: 1.5em;
+            transition: var(--transition);
+        }
+        footer a:hover {
+            color: var(--accent-color);
+            transform: scale(1.2);
+        }
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @media (max-width: 768px) {
+            .family { grid-template-columns: 1fr; }
+            .stories ul { grid-template-columns: 1fr; }
+            nav ul { flex-direction: column; align-items: center; }
+            nav li { margin: 10px 0; }
+        }
+        @media (max-width: 480px) {
+            header h1 { font-size: 2em; }
+            .family-member { width: 100%; }
+        }
+    </style>
+	
+</head>
+<body>
+
+<header>
+    <div class="content">
+        <h1>Family Ezrynn</h1>
+        <p>This section introduces my family, highlighting the important role they play in my life and growth</p>
+    </div>
+</header>
+
+<nav>
+    <ul>
+    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+    <li><a href="aboutme.html"><i class="fas fa-user"></i> About Me</a></li>
+    <li><a href="experience.html"><i class="fas fa-briefcase"></i> Experience</a></li>
+    <li><a href="education.html"><i class="fas fa-graduation-cap"></i> Education</a></li>
+    <li><a href="gallery.html"><i class="fas fa-images"></i> Gallery</a></li>
+    <li><a href="family.html"><i class="fas fa-users"></i> Family</a></li>
+</ul>
+</nav>
+
+<main class="container">
+    <section class="intro">
+        <h2>Meet Ezrynn Family</h2>
+        <p>Family: the heart of my story and the ones who inspire me every day.
+		Behind every dream and every step, my family is my constant guide and support.</p>
+    </section>
+
+    <section class="family">
+        <div class="family-member">
+            <img src="mak.jpeg" alt="Photo of my mother">
+            <h3>Mom</h3>
+            <p>My mom is my greatest supporter and guide, always inspiring me with her love, patience, and wisdom in every step of my journey.</p>
+        </div>
+        <div class="family-member">
+            <img src="ayah.jpeg" alt="Photo of my father">
+            <h3>Dad</h3>
+            <p>“A character who showed me strength, the reality that not everything in this world is trustworthy, and the courage to accept fate, no matter how bitter. I was first time being a child too.”</p>
+        </div>
+        <div class="family-member">
+            <img src="nub.jpeg" alt="Photo of Older Siblings">
+            <h3>Older Brothers</h3>
+            <p>My older brothers has always been a guiding light, inspiring me with their wisdom, patience, and unwavering support throughout every step of my journey.</p>
+        </div>
+        <div class="family-member">
+            <img src="nubbb.jpeg" alt="Photo of Younger Siblings">
+            <h3>Younger Siblings</h3>
+            <p>A source of innocence and happiness, my younger sibling adds warmth and love to my journey.</p>
+        </div>
+    </section>
+
+    <section class="stories">
+        <h3>Family Stories & Inspiration</h3>
+        <ul>
+            <li><strong>Creative Roots:</strong> Growing up, family game nights sparked my interest in interactive designs.</li>
+            <li><strong>Roots of Resilience:</strong> Family stories of love, patience, and hard work have shaped my outlook and motivated me to pursue my goals.</li>
+            <li><strong>Joyful Sparks:</strong> Moments with my younger sibling filled my life with laughter and reminded me to embrace curiosity and playfulness.</li>
+            <li><strong>Guiding Light:</strong> My older sibling’s wisdom and encouragement inspired me to strive for growth and learn from challenges./li>
+        </ul>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Website Design Development. The End !! ThankYou.</p>
+    <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+    <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+</footer>
+
+</body>
+</html>

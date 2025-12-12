@@ -1,0 +1,250 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This website is a reflection of where I come from, who I am becoming, and the people who walk with me along the way.">
+    <meta name="keywords" content="personal website, about me, experience, education, gallery, family">
+    <title>Welcome To My Personal Website</title>
+    <!-- Google Fonts for better typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif; 
+            margin: 0;
+            padding: 0;
+            background:#f0ebd8); 
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden; 
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background:#1d2d44 ;
+            color: #f0ebd8;
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+			min-height: 200px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 31, 63, 0.6); 
+            z-index: 1;
+        }
+        header h1, header p {
+            position: relative;
+            z-index: 2;
+            margin: 0;
+        }
+        header h1 {
+            font-family: 'Dancing Script', cursive; 
+            font-size: 5em;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        header p {
+            font-size: 1.2em;
+            font-weight: 400;
+        }
+        nav {
+            background: #1d2d44; 
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        nav a {
+            color: #e7d8c9; 
+            text-decoration: none;
+            margin: 0 20px;
+            padding: 10px 15px;
+            display: inline-block;
+            transition: all 0.3s ease;
+            font-weight: 400;
+        }
+        nav a:hover {
+            background-color: #4c5760; 
+            transform: translateY(-2px);
+            border-radius: 0; 
+        }
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background: #e7d8c9; 
+            margin: 20px 0;
+            border-radius: 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            animation: fadeIn 1s ease-in;
+        }
+        .hero h2 {
+            color: #001f3f; 
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        .hero p {
+            font-size: 1.1em;
+            margin-bottom: 30px;
+        }
+        .hero .cta-button {
+            background: #001f3f;
+            color: #e6d7c3; 
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 0; 
+            font-weight: 700;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        .hero .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0,31,63,0.3);
+        }
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 40px 0;
+        }
+        .section {
+            flex: 1 1 300px;
+            background: #e6d7c3; 
+            padding: 30px;
+            border-radius: 0; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            animation: fadeIn 1.2s ease-in;
+        }
+        .section:hover {
+            transform: translateY(-5px);
+        }
+        .section h3 {
+            color: #001f3f; 
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #001f3f;
+            color: #e6d7c3; 
+            margin-top: 40px;
+        }
+        footer a {
+            color: #e6d7c3; 
+            margin: 0 10px;
+            font-size: 1.5em;
+            transition: color 0.3s ease;
+        }
+        footer a:hover {
+            color: #ffffff; 
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        input, textarea {
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 0; 
+            font-family: 'Poppins', sans-serif;
+            transition: border-color 0.3s ease;
+        }
+        input:focus, textarea:focus {
+            border-color: #001f3f; 
+            outline: none;
+        }
+        button {
+            padding: 12px;
+            background: #001f3f; 
+            color: #e6d7c3; 
+            border: none;
+            border-radius: 0;
+            cursor: pointer;
+            font-weight: 700;
+            transition: all 0.3s ease;
+        }
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,31,63,0.3);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @media (max-width: 768px) {
+            header h1 { font-size: 2em; }
+            nav a { display: block; margin: 10px 0; }
+            .content { flex-direction: column; }
+            .hero { padding: 40px 20px; }
+        }
+    </style>
+	
+</head>
+<body>
+
+<header>
+    <h1>Welcome to Ezrynn Personal Website</h1>
+    <p>Take a gentle walk through my story and the pieces of life that make me who I am</p>
+</header>
+
+<nav>
+    <a href="index.html"><i class="fas fa-home"></i> Home</a>
+    <a href="aboutme.html"><i class="fas fa-user"></i> About Me</a>
+    <a href="experience.html"><i class="fas fa-briefcase"></i> Experience</a>
+    <a href="education.html"><i class="fas fa-graduation-cap"></i> Education</a>
+    <a href="gallery.html"><i class="fas fa-images"></i> Gallery</a>
+    <a href="family.html"><i class="fas fa-users"></i> Family</a>
+</nav>
+
+<div class="container">
+    <section class="hero">
+        <h2>Get to Know Me</h2>
+        <p>Step into my personal space, a quiet corner of my world where I share the story behind my background, the experiences that have shaped my path, and the family who fills my life with warmth and meaning.
+This website is a gentle reflection of where I come from and who I’m slowly becoming it has a collection of memories, moments, and little milestones that continue to guide me.
+Here, I gather the pieces of my journey like soft snapshots ; the lessons that stayed, the stories that shaped my heart, and the people who walk beside me through every season.
+As you wander through this space, I hope you feel the calm, the warmth, and the authenticity behind every word. Thank you for being here and welcome to a small, honest glimpse into my world.</p>
+        <a href="#contact" class="cta-button">Contact Me</a>
+    </section>
+
+    <div class="content">
+        <div class="section">
+            <h3><i class="fas fa-info-circle"></i> Quick Intro</h3>
+            <p>tiny details and gentle pieces of my story, wrapped in a touch of sweetness and calm. Think of this as a soft introduction to the things I cherish, the paths I’ve walked, and the small joys that color my everyday life.
+               From the dreams I’m chasing to the moments that make my heart feel full, these simple notes offer a closer look into who I am in the most effortless, classy, and dreamy way. 
+			   Just small glimpses, but all of them real and softly honest. Check out the sections above for more !!</p>
+        </div>
+        <div class="section" id="contact">
+            <h3><i class="fas fa-envelope"></i> Contact Me</h3>
+            <form action="#" method="post">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2025 My Personal Website. All rights reserved.</p>
+    <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+    <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+</footer>
+
+</body>
+</html>

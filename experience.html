@@ -1,0 +1,351 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="My Experience: Explore my professional journey in Website Design Development, including projects, roles, and achievements.">
+    <meta name="keywords" content="experience, web design, HTML, CSS, portfolio, projects, skills">
+    <title>Experience - Website Design Development</title>
+    <!-- Google Fonts for better typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #b6a6ca; 
+			--secondary-color: #a09abc;  
+            --accent-color: #d5cfe1; 
+            --bg-color: #e1dee9; 
+            --text-color: #333;
+            --shadow: 0 4px 8px rgba(0,0,0,0.1);
+            --transition: all 0.4s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif; 
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #e1dee9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+         header {
+            background:#d5cfe1 ;
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:#b6a6ca; 
+            z-index: 1;
+        }
+        header .content {
+            position: relative;
+            z-index: 2;
+            animation: slideIn 1s ease-out;
+        }
+        header h1 {
+		    font-family: 'Dancing Script', cursive;
+            font-size: 5em;
+            font-weight: 700;
+			margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        header p {
+            font-size: 1.2em;
+            font-weight: 400;
+        }
+
+        nav {
+            background-color: var(--secondary-color);
+            padding: 15px 0; 
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            box-shadow: var(--shadow);
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        nav li {
+            margin: 0 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 10px 15px; 
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        nav a:hover {
+            background-color: var(--primary-color);
+            border-radius: 5px; 
+            transform: translateY(-2px); 
+        }
+
+        main {
+            padding: 40px 0;
+        }
+
+        .intro {
+            background: #eee4e1; 
+            padding: 40px; 
+            text-align: center;
+            border-radius: 10px; 
+            box-shadow: var(--shadow);
+            margin-bottom: 40px;
+            animation: fadeIn 1.2s ease-in;
+        }
+        .intro h2 {
+            color: var(--secondary-color) ;
+            margin-bottom: 15px;
+        }
+
+        .timeline {
+            position: relative;
+            margin-bottom: 30px;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 20px; 
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #eee4e1;
+        }
+        .timeline-item {
+            margin-bottom: 30px;
+            position: relative;
+            padding-left: 50px;
+        }
+        .timeline-item .content {
+            background:#eee4e1; 
+            padding: 20px; 
+            border-radius: 5px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            animation: fadeIn 1.4s ease-in;
+        }
+        .timeline-item .content:hover {
+            transform: translateY(-2px); 
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .timeline-item .content h3 {
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .timeline-item .date {
+            position: absolute;
+            left: 0;
+            top: 20px;
+            background: var(--accent-color);
+            color: var(--text-color);
+            padding: 5px 10px; 
+            border-radius: 15px;
+            font-weight: 700;
+            z-index: 2;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: #eee4e1; 
+            padding: 20px; 
+            border-radius: 5px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            animation: fadeIn 1.6s ease-in;
+        }
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .card h3 {
+            color:  var(--secondary-color);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .card li {
+            margin-bottom: 8px; 
+            padding-left: 20px;
+            position: relative;
+        }
+        .card li::before {
+            content: '✓';
+            color: var(--accent-color);
+            position: absolute;
+            left: 0;
+        }
+
+        footer {
+            background: var(--secondary-color);
+            color: white;
+            text-align: center;
+            padding: 20px; 
+            margin-top: 30px;
+        }
+        footer a {
+            color: var(--primary-color);
+            margin: 0 15px;
+            font-size: 1.5em;
+            transition: var(--transition);
+        }
+        footer a:hover {
+            color: white;
+            transform: scale(1.1); 
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            .timeline::before { left: 15px; }
+            .timeline-item { padding-left: 40px; }
+            .timeline-item .date { left: 0; }
+            .grid { grid-template-columns: 1fr; }
+            nav ul { flex-direction: column; align-items: center; }
+            nav li { margin: 8px 0; }
+        }
+        @media (max-width: 480px) {
+            header h1 { font-size: 2em; }
+            .card { padding: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="content">
+        <h1>Experience Ezrynn</h1>
+        <p>These experiences reflect my journey, the lessons I’ve learned, and the opportunities that have helped me grow.</p>
+    </div>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="aboutme.html"><i class="fas fa-user"></i> About Me</a></li>
+        <li><a href="experience.html"><i class="fas fa-briefcase"></i> Experience</a></li>
+        <li><a href="education.html"><i class="fas fa-graduation-cap"></i> Education</a></li>
+        <li><a href="gallery.html"><i class="fas fa-images"></i> Gallery</a></li>
+        <li><a href="family.html"><i class="fas fa-users"></i> Family</a></li>
+    </ul>
+</nav>
+
+<main class="container">
+    <section class="intro">
+        <h2>Professional Highlights</h2>An Information Management student at UiTM Kedah, skilled in CMS, ERP, CRM, and DMS, with experience in data management 
+		and documentation, fluent in Bahasa Melayu and English, and always eager to learn and contribute.With [X years] in web design, I've worked on diverse projects, honing skills in HTML, CSS, and user experience. Here's a snapshot of my career and key achievements.</p>
+    </section>
+
+    <section class="timeline">
+	<div class="timeline-item">
+            <div class="date">2023 - Present</div>
+            <div class="content">
+                <h3><i class="fas fa-code"></i> After SPM and UniLife</h3>
+                <p>committed to learning in detail, mastering both the fundamentals and advanced concepts in my field</p>
+                <ul>
+                    <li>Pursuing studies in Information Management at UiTM Kedah, building practical knowledge in data management, documentation, and information systems.</li>
+                    <li>Applying skills in digital tools and software for organizing and managing information efficiently also teamwork experience.</li>
+                    <li>Gaining hands-on experience with Information Management Systems such as CMS, ERP, CRM, and DMS.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <div class="date">2018 - 2022</div>
+            <div class="content">
+                <h3><i class="fas fa-code"></i> High School at SMK Dato Zulkifli Muhammad</h3>
+                <p>Learning the basic coding and system of responsive websites.</p>
+                <ul>
+                    <li>Gained early experience in using digital systems and technology applications for data management.</li>
+                    <li>Participated in competitions related to management, technology, or organization, enhancing practical skills and teamwork experience.</li>
+                    <li>Studied Computer Science stream from Form 1 to Form 3 to learn the basics of coding and systems.</li>
+                </ul>
+            </div>
+        </div>
+        
+    </section>
+
+    <div class="grid">
+        <section class="card">
+            <h3><i class="fas fa-project-diagram"></i> Key Projects</h3>
+            <ul>
+                <li><strong>School IT Project:</strong>Assisted in organizing data, maintaining documentation, and managing school digital systems.</li>
+                <li><strong>Academic Group Projects:</strong> Built with HTML/CSS, using CMS, ERP, CRM, and DMS systems, improving teamwork, problem-solving, and technical skills.</li>
+                <li><strong>Blog Template:</strong> Customizable design with SEO-optimized structure</li>
+            </ul>
+        </section>
+        <section class="card">
+            <h3><i class="fas fa-trophy"></i> Achievements</h3>
+            <ul>
+                <li>Excelled academically, achieving strong results in SPM (2022) and consistently performing well in university studies.</li>
+                <li>Self-driven learning, pursuing personal interests and courses to expand knowledge beyond the classroom.</li>
+                <li>Active participant in competitions and workshops, gaining knowledge and recognition in areas such as management, organization, and personal development.</li>
+            </ul>
+        </section>
+        <section class="card">
+            <h3><i class="fas fa-tools"></i> Tools & Technologies</h3>
+            <ul>
+                <li>1)Microsoft Office Suite</li>
+                <li>2)Data Visualization Tools</li>
+                <li>3)Browser DevTools, Lighthouse</li>
+            </ul>
+        </section>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2025 Website Design Development. Lets have fun !!.</p>
+    <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+    <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+</footer>
+
+</body>
+</html>
