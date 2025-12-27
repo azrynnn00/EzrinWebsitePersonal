@@ -1,0 +1,637 @@
+ {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Index Page Styles */
+.index body {
+    background: #f0ebd8;
+}
+
+.index header {
+    background: #1d2d44;
+    color: #f0ebd8;
+    padding: 80px 20px;
+    text-align: center;
+    position: relative;
+    min-height: 200px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.index header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 31, 63, 0.6);
+    z-index: 1;
+}
+
+.index header h1, .index header p {
+    position: relative;
+    z-index: 2;
+    margin: 0;
+}
+
+.index header h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 5em;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.index header p {
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+.index nav {
+    background: #1d2d44;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.index nav a {
+    color: #e7d8c9;
+    text-decoration: none;
+    margin: 0 20px;
+    padding: 10px 15px;
+    display: inline-block;
+    transition: all 0.3s ease;
+    font-weight: 400;
+}
+
+.index nav a:hover {
+    background-color: #4c5760;
+    transform: translateY(-2px);
+    border-radius: 0;
+}
+
+.index .hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: #e7d8c9;
+    margin: 20px 0;
+    border-radius: 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    animation: fadeIn 1s ease-in;
+}
+
+.index .hero h2 {
+    color: #001f3f;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.index .hero p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+.index .hero .cta-button {
+    background: #001f3f;
+    color: #e6d7c3;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 0;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.index .hero .cta-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,31,63,0.3);
+}
+
+.index .content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 40px 0;
+}
+
+.index .section {
+    flex: 1 1 300px;
+    background: #e6d7c3;
+    padding: 30px;
+    border-radius: 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    animation: fadeIn 1.2s ease-in;
+}
+
+.index .section:hover {
+    transform: translateY(-5px);
+}
+
+.index .section h3 {
+    color: #001f3f;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.index footer {
+    text-align: center;
+    padding: 30px;
+    background: #001f3f;
+    color: #e6d7c3;
+    margin-top: 40px;
+}
+
+.index footer a {
+    color: #e6d7c3;
+    margin: 0 10px;
+    font-size: 1.5em;
+    transition: color 0.3s ease;
+}
+
+.index footer a:hover {
+    color: #ffffff;
+}
+
+.index form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.index input, .index textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 0;
+    font-family: 'Poppins', sans-serif;
+    transition: border-color 0.3s ease;
+}
+
+.index input:focus, .index textarea:focus {
+    border-color: #001f3f;
+    outline: none;
+}
+
+.index button {
+    padding: 12px;
+    background: #001f3f;
+    color: #e6d7c3;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.index button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,31,63,0.3);
+}
+
+.index @media (max-width: 768px) {
+    .index header h1 { font-size: 2em; }
+    .index nav a { display: block; margin: 10px 0; }
+    .index .content { flex-direction: column; }
+    .index .hero { padding: 40px 20px; }
+}
+
+/* About Me Page Styles */
+.aboutme :root {
+    --burgundy: #800020;
+    --cream: #f5f5dc;
+    --accent: #c19a6b;
+    --bg-color: #efe5dc;
+    --text-color: #333;
+    --shadow: 0 4px 8px rgba(0,0,0,0.1);
+    --transition: all 0.4s ease;
+}
+
+.aboutme body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+.aboutme header {
+    background: #ad2e24;
+    color: var(--cream);
+    padding: 80px 20px;
+    text-align: center;
+    position: relative;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.aboutme header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #81171b;
+    z-index: 1;
+}
+
+.aboutme header .content {
+    position: relative;
+    z-index: 2;
+    animation: slideIn 1s ease-out;
+}
+
+.aboutme header h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 5em;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.aboutme header p {
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+.aboutme nav {
+    background-color: var(--burgundy);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: var(--shadow);
+}
+
+.aboutme nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.aboutme nav li {
+    margin: 0 20px;
+}
+
+.aboutme nav a {
+    color: var(--cream);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 10px 15px;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.aboutme nav a:hover {
+    background-color: var(--accent);
+    border-radius: 5px;
+    transform: translateY(-2px);
+}
+
+.aboutme main {
+    display: flex;
+    gap: 30px;
+    padding: 40px 0;
+}
+
+.aboutme .sidebar {
+    flex: 0 0 300px;
+    background: var(--cream);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    animation: fadeIn 1.2s ease-in;
+}
+
+.aboutme .sidebar h3 {
+    color: var(--burgundy);
+    margin-bottom: 15px;
+}
+
+.aboutme .sidebar ul {
+    list-style: none;
+}
+
+.aboutme .sidebar li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.aboutme .sidebar li::before {
+    content: '>';
+    color: var(--accent);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.aboutme .progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.aboutme .progress-bar div {
+    height: 100%;
+    border-radius: 5px;
+    transition: width 0.3s ease;
+}
+
+.aboutme .content-area {
+    flex: 1;
+}
+
+.aboutme .intro {
+    background: var(--cream);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    margin-bottom: 30px;
+    animation: fadeIn 1.4s ease-in;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.aboutme .intro img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: var(--shadow);
+}
+
+.aboutme .intro .text {
+    flex: 1;
+}
+
+.aboutme .intro h2 {
+    color: var(--burgundy);
+    margin-bottom: 15px;
+}
+
+.aboutme .journey {
+    background: var(--cream);
+    color: var(--burgundy);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    font-family: 'Fira Code', monospace;
+    animation: fadeIn 1.6s ease-in;
+    border-left: 5px solid var(--accent);
+}
+
+.aboutme .journey h3 {
+    color: var(--burgundy);
+    margin-bottom: 15px;
+}
+
+.aboutme .journey p {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    border-left: 3px solid var(--burgundy);
+    font-style: italic;
+}
+
+.aboutme .biodata {
+    background: var(--cream);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    animation: fadeIn 1.8s ease-in;
+    margin-bottom: 20px;
+}
+
+.aboutme .biodata h3 {
+    color: var(--burgundy);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.aboutme .biodata p {
+    margin-bottom: 10px;
+}
+
+.aboutme footer {
+    background: var(--burgundy);
+    color: var(--cream);
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 40px;
+}
+
+.aboutme footer a {
+    color: var(--cream);
+    margin: 0 15px;
+    font-size: 1.5em;
+    transition: var(--transition);
+}
+
+.aboutme footer a:hover {
+    color: var(--accent);
+    transform: scale(1.2);
+}
+
+.aboutme @media (max-width: 768px) {
+    .aboutme main { flex-direction: column; }
+    .aboutme .sidebar { flex: none; }
+    .aboutme .intro { flex-direction: column; text-align: center; }
+    .aboutme nav ul { flex-direction: column; align-items: center; }
+    .aboutme nav li { margin: 10px 0; }
+}
+
+.aboutme @media (max-width: 480px) {
+    .aboutme header h1 { font-size: 2em; }
+    .aboutme .journey { padding: 20px; }
+    .aboutme .biodata { padding: 20px; }
+}
+
+/* Experience Page Styles */
+.experience :root {
+    --primary-color: #b6a6ca;
+    --secondary-color: #a09abc;
+    --accent-color: #d5cfe1;
+    --bg-color: #e1dee9;
+    --text-color: #333;
+    --shadow: 0 4px 8px rgba(0,0,0,0.1);
+    --transition: all 0.4s ease;
+}
+
+.experience body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: #e1dee9;
+}
+
+.experience header {
+    background: #d5cfe1;
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+    position: relative;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.experience header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #b6a6ca;
+    z-index: 1;
+}
+
+.experience header .content {
+    position: relative;
+    z-index: 2;
+    animation: slideIn 1s ease-out;
+}
+
+.experience header h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 5em;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.experience header p {
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+.experience nav {
+    background-color: var(--secondary-color);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: var(--shadow);
+}
+
+.experience nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.experience nav li {
+    margin: 0 20px;
+}
+
+.experience nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 10px 15px;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.experience nav a:hover {
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    transform: translateY(-2px);
+}
+
+.experience main {
+    padding: 40px 0;
+}
+
+.experience .intro {
+    background: #eee4e1;
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    margin-bottom: 40px;
+    animation: fadeIn 1.2s ease-in;
+}
+
+.experience .intro h2 {
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.experience .timeline {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.experience .timeline::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #eee4e1;
+}
+
+.experience .timeline-item {
+    margin-bottom: 30px;
+    position: relative;
+    padding-left: 50px;
+}
+
+.experience .timeline-item .content {
+    background: #eee4e1;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    animation: fadeIn 1.4s ease-in;
+}
+
+.experience .timeline-item .content:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.experience .timeline-item .content h3 {
+    color: var(--secondary-color);
+    margin-bottom
